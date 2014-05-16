@@ -4,13 +4,22 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://adnandzebic.github.io/atom.xml" rel="self"/>
   <link href="http://adnandzebic.github.io/"/>
-  <updated>2014-05-16T03:12:35-07:00</updated>
+  <updated>2014-05-16T16:28:28-07:00</updated>
   <id>http://adnandzebic.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Adnan Dzebic]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Post]]></title>
+    <link href="http://adnandzebic.github.io/blog/2014/05/16/first-post/"/>
+    <updated>2014-05-16T16:25:08-07:00</updated>
+    <id>http://adnandzebic.github.io/blog/2014/05/16/first-post</id>
+    <content type="html"><![CDATA[<p>blah blah blah</p>
+]]></content>
+  </entry>
   
 </feed>
