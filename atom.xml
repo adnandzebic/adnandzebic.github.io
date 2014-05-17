@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Adnan Dzebic]]></title>
   <link href="http://adnandzebic.github.io/atom.xml" rel="self"/>
   <link href="http://adnandzebic.github.io/"/>
-  <updated>2014-05-16T17:59:06-07:00</updated>
+  <updated>2014-05-16T18:02:08-07:00</updated>
   <id>http://adnandzebic.github.io/</id>
   <author>
     <name><![CDATA[Adnan Dzebic]]></name>
