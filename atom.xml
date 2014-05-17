@@ -4,7 +4,7 @@
   <title><![CDATA[Adnan Dzebic]]></title>
   <link href="http://adnandzebic.github.io/atom.xml" rel="self"/>
   <link href="http://adnandzebic.github.io/"/>
-  <updated>2014-05-16T21:47:20-07:00</updated>
+  <updated>2014-05-16T21:51:26-07:00</updated>
   <id>http://adnandzebic.github.io/</id>
   <author>
     <name><![CDATA[Adnan Dzebic]]></name>
@@ -42,6 +42,14 @@ x(x+2)     &= 0
     <tr>
       <td>$1$</td>
       <td>$\frac{1}{s}, s&gt;0$</td>
+    </tr>
+    <tr>
+      <td>$e^{at}$</td>
+      <td>$\frac{1}{s-1}, s&gt;a$</td>
+    </tr>
+    <tr>
+      <td>$t^{n}$, $n=$positive integer</td>
+      <td>$\frac{n!}{s^{n+1}}, s&gt;0$</td>
     </tr>
   </tbody>
 </table>
