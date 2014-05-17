@@ -4,7 +4,7 @@
   <title><![CDATA[Adnan Dzebic]]></title>
   <link href="http://adnandzebic.github.io/atom.xml" rel="self"/>
   <link href="http://adnandzebic.github.io/"/>
-  <updated>2014-05-16T21:34:04-07:00</updated>
+  <updated>2014-05-16T21:36:23-07:00</updated>
   <id>http://adnandzebic.github.io/</id>
   <author>
     <name><![CDATA[Adnan Dzebic]]></name>
@@ -34,8 +34,8 @@ x(x+2)     &= 0
 <table>
   <thead>
     <tr>
-      <th>$f(t)=\mathcal{L}^{-1}{F(s)}</th>
-      <th>F(s) = \mathcal{L}{f(t)}</th>
+      <th>$f(t)=\mathcal{L}^{-1}{F(s)}$</th>
+      <th>$F(s) = \mathcal{L}{f(t)}$</th>
     </tr>
   </thead>
   <tbody>
