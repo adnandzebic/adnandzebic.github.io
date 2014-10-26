@@ -3,8 +3,9 @@ $(function () {
     var parser = math.parser();
     for (var j = 0; j < 14; j += 0.1)
     {
-      var expression = sprintf('%d * %d',j,j);
-        d1.push([j, math.eval(expression)]);
+      //var expression = sprintf('%d * %d',j,j);
+      var scope = {j:j};
+        d1.push([j, math.eval('j*j', scope)]);
     }
 
 $.plot("#placeholder2", [
