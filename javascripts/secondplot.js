@@ -39,7 +39,7 @@ $.plot("#placeholder2", [
     ], {
 
       yaxis: {
-        ticks: 50,
+        ticks: 10,
         min: -100,
         max: 100,
         tickDecimals: 3
