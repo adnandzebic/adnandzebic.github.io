@@ -1,7 +1,7 @@
 $(function () {
     var d1 = [];
     var parser = math.parser();
-    for (var s = 0; s < 1000; s += 1)
+    for (var s = 0; s < 5000; s += 1)
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
@@ -16,7 +16,7 @@ $.plot("#placeholder2", [
       yaxis: {
         ticks: 10,
         min: -100,
-        max: 10,
+        max: 50,
         tickDecimals: 3
       },
 
@@ -40,7 +40,7 @@ $.plot("#placeholder2", [
     ], {
 
       yaxis: {
-        ticks: 10,
+        ticks: 50,
         min: -100,
         max: 10,
         tickDecimals: 3
