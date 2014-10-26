@@ -3,7 +3,8 @@ $(function () {
     var parser = math.parser();
     for (var j = 0; j < 14; j += 0.1)
     {
-        d1.push([j, math.eval('' + j + '*' + j)]);
+      var expression = '' + j + '*2';
+        d1.push([j, math.eval(expression)]);
     }
 
 $.plot("#placeholder2", [
