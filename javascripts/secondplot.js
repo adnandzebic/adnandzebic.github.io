@@ -1,7 +1,7 @@
 $(function () {
     var d1 = [];
     var parser = math.parser();
-    for (var s = 0; s < 1000; s += 1)
+    for (var s = 0; s < 10000; s += 1)
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
@@ -22,7 +22,7 @@ $.plot("#placeholder2", [
 
       xaxis: {
         min: 0,
-        max: 1000,
+        max: 10000,
       },
 
       grid: {
@@ -50,7 +50,7 @@ $.plot("#placeholder2", [
 
       xaxis: {
         min: 0,
-        max: 1000,
+        max: 10000,
       },
 
       grid: {
