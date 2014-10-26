@@ -4,7 +4,7 @@ $(function () {
     for (var s = 0; s < 14; s += 0.1)
     {
       //var expression = sprintf('%d * %d',j,j);
-      var scope = {s:s};
+      var scope = {s:s*i};
       var hs = '(s+10)^2/((s+1)*(s+1000))';
         d1.push([s, math.eval(hs, scope)]);
     }
