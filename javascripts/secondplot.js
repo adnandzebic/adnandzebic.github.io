@@ -1,12 +1,12 @@
 $(function () {
     var d1 = [];
     var parser = math.parser();
-    for (var s = 0; s < 10000; s += 1)
+    for (var s = 0; s < 1000; s += 1)
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
       var hs = '(s*i+10)^2/((s*i+1)*(s*i+1000))';
-        d1.push([s, math.eval('sqrt(re(' + hs + ')^2 + im(' + hs + ')^2)' , scope)]);
+        d1.push([s, math.eval('20*log(sqrt(re(' + hs + ')^2 + im(' + hs + ')^2))' , scope)]);
     }
 
 $.plot("#placeholder2", [
@@ -22,7 +22,7 @@ $.plot("#placeholder2", [
 
       xaxis: {
         min: 0,
-        max: 10000,
+        max: 1000,
       },
 
       grid: {
@@ -50,7 +50,7 @@ $.plot("#placeholder2", [
 
       xaxis: {
         min: 0,
-        max: 10000,
+        max: 1000,
       },
 
       grid: {
