@@ -183,14 +183,15 @@ x(x+2)     &= 0
 $(function () {
     var d1 = [];
     var d2 = [];
+    var d3 = [];
     for (var i = 0; i < 14; i += 0.5)
     {
-        d2.push([i, Math.sin(i)]);
         d1.push([i, Math.cos(i)]);
+        d2.push([i, Math.sin(i)]);
+        d2.push([i, i*i]);
     }
  
     // a null signifies separate line segments
-    var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
     
     $.plot($("#placeholder"), [ d1, d2, d3 ]);
     
