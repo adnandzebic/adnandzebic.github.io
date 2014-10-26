@@ -5,7 +5,7 @@ $(function () {
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {j:j};
-        d1.push([j, math.eval('j*j', scope)]);
+        d1.push([j, math.eval('j*j', j)]);
     }
 
 $.plot("#placeholder2", [
