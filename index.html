@@ -188,13 +188,13 @@ $(function () {
     {
         d1.push([i, Math.cos(i)]);
         d2.push([i, Math.sin(i)]);
-        d3.push([i, 1-Math.sin(i)]);
+        d3.push([i, Math.exp(i)]);
     }
 
 $.plot("#placeholder", [
-      { label: "sin(x)", data: d1 },
+      { label: "cos(x)", data: d1 },
       { label: "cos(x)", data: d2 },
-      { label: "tan(x)", data: d3 }
+      { label: "exp(x)", data: d3 }
     ], {
 
       yaxis: {
@@ -221,9 +221,9 @@ $.plot("#placeholder", [
     
     window.onresize = function(event) {
 $.plot("#placeholder", [
-      { label: "sin(x)", data: d1 },
-      { label: "cos(x)", data: d2 },
-      { label: "tan(x)", data: d3 }
+      { label: "cos(x)", data: d1 },
+      { label: "sin(x)", data: d2 },
+      { label: "exp(x)", data: d3 }
     ], {
 
       yaxis: {
