@@ -191,23 +191,25 @@ $(function () {
         d3.push([i, 1-Math.sin(i)]);
     }
 
-
-var options = {
-    series: {
-        lines: { show: true },
-        points: { show: true }
-
-xaxis, yaxis: {
-    min: 0
-    max: 10
-}
-    }
-};
- 
-    $.plot($("#placeholder"), [ d1, d2, d3 ], options);
+    $.plot($("#placeholder"), [ d1, d2, d3 ],
+       yaxis: {
+        ticks: 10,
+        min: -2,
+        max: 2,
+        tickDecimals: 3
+      } 
+        );
     
     window.onresize = function(event) {
-        $.plot($("#placeholder"), [ d1, d2, d3 ], options);
+        $.plot($("#placeholder"), [ d1, d2, d3 ],
+       yaxis: {
+        ticks: 10,
+        min: -2,
+        max: 2,
+        tickDecimals: 3
+      }
+            
+            );
     }
 });
 </script>
