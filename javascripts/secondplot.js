@@ -20,10 +20,8 @@ $.plot("#placeholder2", [
         tickDecimals: 3
       },
 
-      xaxis: {
-        min: 0,
-        max: 1000,
-      },
+xaxis: { ticks: [0.001,0.01,0.1,1,10,1000],
+                 transform:  function(v) {return Math.log(v+0.0001); /*move away from zero*/} , tickDecimals: 3, min: 0, max: 1000},
 
       grid: {
         backgroundColor: "#073642",
@@ -48,10 +46,8 @@ $.plot("#placeholder2", [
         tickDecimals: 3
       },
 
-      xaxis: {
-        min: 0,
-        max: 1000,
-      },
+xaxis: { ticks: [0.001,0.01,0.1,1,10,1000],
+                 transform:  function(v) {return Math.log(v+0.0001); /*move away from zero*/} , tickDecimals: 3, min: 0, max: 1000},
 
       grid: {
         backgroundColor: "#073642",
