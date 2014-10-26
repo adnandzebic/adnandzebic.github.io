@@ -2,7 +2,7 @@ $(function () {
     var d1 = [];
     for (var j = 0; j < 14; j += 0.1)
     {
-        d1.push([j, math.sqrt(j)]);
+        d1.push([j, math.eval('j')]);
     }
 
 $.plot("#placeholder2", [
