@@ -5,7 +5,7 @@ $(function () {
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
-        d1.push([s, math.eval('(s)^2', scope)]);
+        d1.push([s, math.eval('(s+10)^2/((s+1)*(s+1000))', scope)]);
     }
 
 $.plot("#placeholder2", [
