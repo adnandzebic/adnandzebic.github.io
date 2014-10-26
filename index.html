@@ -188,11 +188,9 @@ $(function () {
     {
         d1.push([i, Math.cos(i)]);
         d2.push([i, Math.sin(i)]);
-        d2.push([i, Math.exp(i)]);
+        d3.push([i, Math.exp(i)]);
     }
  
-    // a null signifies separate line segments
-    
     $.plot($("#placeholder"), [ d1, d2, d3 ]);
     
     window.onresize = function(event) {
