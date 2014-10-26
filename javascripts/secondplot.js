@@ -5,7 +5,7 @@ $(function () {
     {
       var scope = {s:s};
       var hs = 's*i*(s*i+50)/((s*i)^2+s*i+16)';
-        d1.push([s, math.eval('20*log(sqrt(re(' + hs + ')^2 + im(' + hs + ')^2))' , scope)]);
+        d1.push([s, 20*Math.log(math.eval('sqrt(re(' + hs + ')^2 + im(' + hs + ')^2)' , scope))]);
     }
 
 $.plot("#placeholder2", [
