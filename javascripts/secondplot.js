@@ -6,7 +6,7 @@ $(function () {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
       var hs = '(s*i+10)^2/((s*i+1)*(s*i+1000))';
-        d1.push([s, math.eval(sqrt('s'), scope)]);
+        d1.push([s, math.eval('sqrt(s)', scope)]);
     }
 
 $.plot("#placeholder2", [
