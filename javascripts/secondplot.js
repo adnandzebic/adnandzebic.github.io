@@ -20,7 +20,7 @@ $.plot("#placeholder2", [
       },
 
 xaxis: { ticks: [0.01,0.1,1,10,100,1000],
-                 transform:  function(v) {return Math.log(v+0.01); /*move away from zero*/} , tickDecimals: 3, min: 0, max: 1000},
+                 transform:  function(v) {return Math.log(v+0.01); /*move away from zero*/} , tickDecimals: 3, min: 0.01, max: 10},
 
       grid: {
         backgroundColor: "#073642",
@@ -46,7 +46,7 @@ $.plot("#placeholder2", [
       },
 
 xaxis: { ticks: [0.1,1,10,100,1000],
-                 transform:  function(v) {return Math.log(v+0.01); /*move away from zero*/} , tickDecimals: 3, min: 0, max: 1000},
+                 transform:  function(v) {return Math.log(v+0.01); /*move away from zero*/} , tickDecimals: 3, min: 0.01, max: 10},
 
       grid: {
         backgroundColor: "#073642",
