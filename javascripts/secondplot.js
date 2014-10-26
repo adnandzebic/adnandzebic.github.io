@@ -22,7 +22,7 @@ $.plot("#placeholder2", [
         tickDecimals: 3
       },
       grid: {
-        backgroundColor: { colors: [ "#fff", "#eee" ] },
+        backgroundColor: { colors: [ "#000", "#eee" ] },
         borderWidth: {
           top: 1,
           right: 1,
@@ -47,7 +47,7 @@ $.plot("#placeholder2", [
       },
 
       grid: {
-        backgroundColor: { colors: [ "#fff", "#eee" ] },
+        backgroundColor: { colors: [ "#000", "#eee" ] },
         borderWidth: {
           top: 1,
           right: 1,
