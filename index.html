@@ -182,14 +182,14 @@ x(x+2)     &= 0
 <script type="text/javascript">
 $(function () {
     var d1 = [];
+    for (var i = 0; i < 14; i += 0.5)
+        d1.push([i, Math.cos(i)]);
     var d2 = [];
+    for (var i = 0; i < 14; i += 0.5)
+        d2.push([i, Math.sin(i)]);
     var d3 = [];
     for (var i = 0; i < 14; i += 0.5)
-    {
-        d1.push([i, Math.cos(i)]);
         d3.push([i, 1-Math.exp(-i/2)]);
-        d2.push([i, Math.sin(i)]);
-    }
  
     $.plot($("#placeholder"), [ d1, d2, d3 ]);
     
