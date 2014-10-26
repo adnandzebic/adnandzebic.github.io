@@ -1,9 +1,8 @@
 $(function () {
     var d1 = [];
     var parser = math.parser();
-    for (var s = 0.01; s < 100; s += 0.1)
+    for (var s = 0.01; s < 100; s += 0.01)
     {
-      //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
       var hs = 's*i*(s*i+50)/((s*i)^2+s*i+16)';
         d1.push([s, math.eval('20*log(sqrt(re(' + hs + ')^2 + im(' + hs + ')^2))' , scope)]);
