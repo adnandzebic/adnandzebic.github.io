@@ -1,18 +1,12 @@
 $(function () {
     var d1 = [];
-    var d2 = [];
-    var d3 = [];
     for (var i = 0; i < 14; i += 0.1)
     {
         d1.push([i, Math.cos(i)]);
-        d2.push([i, Math.sin(i)]);
-        d3.push([i, Math.exp(i)]);
     }
 
 $.plot("#placeholder2", [
-      { label: "cos(x)", data: d1 },
-      { label: "cos(x)", data: d2 },
-      { label: "exp(x)", data: d3 }
+      { label: "H(s)", data: d1 },
     ], {
 
       yaxis: {
@@ -34,9 +28,7 @@ $.plot("#placeholder2", [
     
     window.onresize = function(event) {
 $.plot("#placeholder2", [
-      { label: "cos(x)", data: d1 },
-      { label: "sin(x)", data: d2 },
-      { label: "exp(x)", data: d3 }
+      { label: "H(s)", data: d1 },
     ], {
 
       yaxis: {
