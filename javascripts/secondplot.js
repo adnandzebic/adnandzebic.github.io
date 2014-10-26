@@ -9,7 +9,7 @@ $(function () {
         d3.push([i, Math.exp(i)]);
     }
 
-$.plot("#placeholder1", [
+$.plot("#placeholder2", [
       { label: "cos(x)", data: d1 },
       { label: "cos(x)", data: d2 },
       { label: "exp(x)", data: d3 }
@@ -33,7 +33,7 @@ $.plot("#placeholder1", [
     });
     
     window.onresize = function(event) {
-$.plot("#placeholder1", [
+$.plot("#placeholder2", [
       { label: "cos(x)", data: d1 },
       { label: "sin(x)", data: d2 },
       { label: "exp(x)", data: d3 }
