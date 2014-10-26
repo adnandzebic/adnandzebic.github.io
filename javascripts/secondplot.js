@@ -1,7 +1,7 @@
 $(function () {
     var d1 = [];
     var parser = math.parser();
-    for (var s = 0; s < 14; s += 0.1)
+    for (var s = 0; s < 1000; s += 1)
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
