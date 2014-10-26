@@ -194,7 +194,7 @@ $(function () {
     $.plot($("#placeholder"), [ d1, d2, d3 ], yaxis:{max=10});
     
     window.onresize = function(event) {
-        $.plot($("#placeholder"), [ d1, d2, d3 ]);
+        $.plot($("#placeholder"), [ d1, d2, d3 ], yaxis:{max=10});
     }
 });
 </script>
