@@ -204,10 +204,10 @@ xaxis, yaxis: {
     }
 };
  
-    $.plot($("#placeholder"), [ d1, d2, d3 ]);
+    $.plot($("#placeholder"), [ d1, d2, d3 ], options);
     
     window.onresize = function(event) {
-        $.plot($("#placeholder"), [ d1, d2, d3 ]);
+        $.plot($("#placeholder"), [ d1, d2, d3 ], options);
     }
 });
 </script>
