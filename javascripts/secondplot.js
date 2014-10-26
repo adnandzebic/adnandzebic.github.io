@@ -19,6 +19,12 @@ $.plot("#placeholder2", [
         max: 15,
         tickDecimals: 3
       },
+
+      xaxis: {
+        min: 0,
+        max: 1000,
+      },
+
       grid: {
         backgroundColor: "#073642",
         borderWidth: {
@@ -40,6 +46,11 @@ $.plot("#placeholder2", [
         min: -2,
         max: 15,
         tickDecimals: 3
+      },
+
+      xaxis: {
+        min: 0,
+        max: 1000,
       },
 
       grid: {
