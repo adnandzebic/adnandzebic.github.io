@@ -15,8 +15,8 @@ $.plot("#placeholder2", [
 
       yaxis: {
         ticks: 10,
-        min: -2,
-        max: 15,
+        min: -50,
+        max: 10,
         tickDecimals: 3
       },
 
@@ -43,8 +43,8 @@ $.plot("#placeholder2", [
 
       yaxis: {
         ticks: 10,
-        min: -2,
-        max: 15,
+        min: -50,
+        max: 10,
         tickDecimals: 3
       },
 
