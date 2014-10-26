@@ -5,7 +5,7 @@ $(function () {
     {
       //var expression = sprintf('%d * %d',j,j);
       var scope = {s:s};
-      var hs = '(s*i+10)^2/((s*i+1)*(s*i+1000))';
+      var hs = '32/((s*i)^2+2*s*i+64)';
         d1.push([s, math.eval('20*log(sqrt(re(' + hs + ')^2 + im(' + hs + ')^2))' , scope)]);
     }
 
