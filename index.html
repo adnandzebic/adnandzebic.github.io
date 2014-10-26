@@ -185,11 +185,11 @@ $(function () {
     var d1 = [];
     var d2 = [];
     var d3 = [];
-    for (var j = 0; j < 14; j += 0.1)
+    for (var i = 0; i < 14; i += 0.1)
     {
-        d1.push([j, Math.cos(j)]);
-        d2.push([j, Math.sin(j)]);
-        d3.push([j, Math.exp(j)]);
+        d1.push([i, Math.cos(i)]);
+        d2.push([i, Math.sin(i)]);
+        d3.push([i, Math.exp(i)]);
     }
 
 $.plot("#placeholder", [
