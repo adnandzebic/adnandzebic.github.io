@@ -1,7 +1,7 @@
 $(function () {
     var d1 = [];
     var parser = math.parser();
-    for (var s = 0.01; s < 100; s += 0.01)
+    for (var s = 0.01; s < 10; s += 0.01)
     {
       var scope = {s:s};
       var hs = 's*i*(s*i+50)/((s*i)^2+s*i+16)';
@@ -13,7 +13,7 @@ $.plot("#placeholder2", [
     ], {
 
       yaxis: {
-        ticks: 10,
+        ticks: 50,
         min: -100,
         max: 50,
         tickDecimals: 3
