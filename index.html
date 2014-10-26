@@ -191,10 +191,10 @@ $(function () {
         d3.push([i, 1-Math.sin(i)]);
     }
  
-    $.plot($("#placeholder"), [ d1, d2, d3 ], {yaxis:{max=10}});
+    $.plot($("#placeholder"), [ d1, d2, d3 ]);
     
     window.onresize = function(event) {
-      $.plot($("#placeholder"), [ d1, d2, d3 ], {yaxis:{max=10}} );
+        $.plot($("#placeholder"), [ d1, d2, d3 ]);
     }
 });
 </script>
