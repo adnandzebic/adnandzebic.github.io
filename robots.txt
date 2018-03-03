@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: http://adnandzebic.github.io/sitemap.xml
