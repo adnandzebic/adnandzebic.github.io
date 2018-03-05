@@ -9,8 +9,8 @@
 	function setup(device) {
 		//debugger
 		return device.open()
-		.then(() => device.selectConfiguration(0))
-		.then(() => device.claimInterface(1))
+		.then(() => device.selectConfiguration(1))
+		.then(() => device.claimInterface(0))
 	}
 
 	function print() {
