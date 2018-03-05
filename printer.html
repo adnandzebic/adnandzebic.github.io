@@ -9,8 +9,8 @@
 	async function setup(device) {
 		//debugger
 		await device.open();
-		//.then(() => device.selectConfiguration(0))
-		//.then(() => device.claimInterface(1))
+		.then(() => device.selectConfiguration(0))
+		.then(() => device.claimInterface(1))
 	}
 
 	function print() {
@@ -25,7 +25,6 @@
 		data1[1] = 0x03;
 		data1[2] = 0x00;
 		//var data1 = [0x50, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00];
-		debugger
 		device.transferOut(1, data1);
 
 		data1[0] = 0x45;
