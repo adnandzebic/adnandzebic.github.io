@@ -6,9 +6,9 @@
 	<script>
 	var device;
 
-	async function setup(device) {
+	function setup(device) {
 		//debugger
-		await device.open();
+		return device.open()
 		.then(() => device.selectConfiguration(0))
 		.then(() => device.claimInterface(1))
 	}
