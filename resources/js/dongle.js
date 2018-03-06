@@ -28,7 +28,7 @@ function print() {
   data1[6] = 0x01;
 
   device.transferOut(1, data1);
-  device.close();
+  //device.close();
   //var data2 = [0x45, 0x40, 0x3b, 0x0f, 0x00, 0x00, 0x01, 0x00];
   //device.transferOut(1, data2);
 
@@ -70,13 +70,14 @@ function connect() {
 
 function connectAndPrint() {
   if (device == null) {
+    debugger
     navigator.usb.requestDevice({ filters: [{ vendorId: 0x0426 }] })
     .then(selectedDevice => {
       device = selectedDevice;
       console.log(device);
       return setup(device);
     })
-    .then(() => print())
+    .then(() => print(device))
     .catch(error => { console.log(error); })
   }
   else
