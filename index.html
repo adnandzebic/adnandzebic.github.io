@@ -1,73 +1,138 @@
-<html>
-<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<title>IDT Programming</title>
-</head>
-<body>
-	<textarea id="printContent"></textarea>
-	<input type="submit" onclick="connectAndPrint()" value="Print"/>
-	<P>Type text into box and click on submit button.
-	<script>
-	var device;
+<!DOCTYPE html>
+<html lang="en">
 
-	function setup(device) {
-		//debugger
-		return device.open()
-		.then(() => device.selectConfiguration(1))
-		.then(() => device.claimInterface(0))
-	}
+  <head>
 
-	function print() {
-		var string = document.getElementById("printContent").value + "\n";
-		var encoder = new TextEncoder();
-		var data = encoder.encode(string);
-		//device.transferOut(1, data)
-		//.catch(error => { console.log(error); })
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		var data1 = new Uint8Array(8);
-		data1[0] = 0x50;
-		data1[1] = 0x03;
-		data1[2] = 0x00;
-		//var data1 = [0x50, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00];
-		device.transferOut(1, data1);
+    <title>IDT Programming</title>
 
-		data1[0] = 0x45;
-		data1[1] = 0x40;
-		data1[2] = 0x3b;
-		data1[3] = 0x0f;
-		data1[6] = 0x01;
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-		device.transferOut(1, data1);
-		device.close();
-		//var data2 = [0x45, 0x40, 0x3b, 0x0f, 0x00, 0x00, 0x01, 0x00];
-		//device.transferOut(1, data2);
+    <!-- Custom styles for this template -->
+    <link href="resources/css/heroic-features.css" rel="stylesheet">
 
-	}
+  </head>
 
-	function connectAndPrint() {
-		if (device == null) {
-			navigator.usb.requestDevice({ filters: [{ vendorId: 0x0426 }] })
-			.then(selectedDevice => {
-				device = selectedDevice;
-				console.log(device);
-				return setup(device);
-			})
-			.then(() => print())
-			.catch(error => { console.log(error); })
-		}
-		else
-			print();
-	}
+  <body>
 
-	navigator.usb.getDevices()
-	.then(devices => {
-		if (devices.length > 0) {
-			device = devices[0];
-			return setup(device);
-		}
-	})
-	.catch(error => { console.log(error); });
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">IDT Programming</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	</script>
-</body>
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-3">IDT Programming</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+        <button class="btn btn-primary btn-lg" onclick="connect()">Connect</button>
+      </header>
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <script type="text/javascript" src="resources/js/dongle.js"></script>
+
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" onclick="connectAndPrint()">Find Out More!</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>
