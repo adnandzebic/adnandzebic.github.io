@@ -63,6 +63,7 @@ function connect() {
       console.log(device);
       return setup(device);
     })
+    .then(() => write(device))
     .catch(error => { console.log(error); })
   }
 }
